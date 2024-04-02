@@ -1,0 +1,43 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        // Conversion functions
+        double SecondsToMinutes(double seconds)
+        {
+            return seconds / 60;
+        }
+
+        double MinutesToHours(double minutes)
+        {
+            return minutes / 60;
+        }
+
+        double HoursToDays(double hours)
+        {
+            return hours / 24;
+        }
+
+        double DaysToMonths(double days)
+        {
+            return days / 30; // Approximation, not exact
+        }
+
+        // Input value (seconds)
+        double seconds = 3600;
+
+        // Perform conversions
+        double minutes = SecondsToMinutes(seconds);
+        double hours = MinutesToHours(minutes);
+        double days = HoursToDays(hours);
+        double months = DaysToMonths(days);
+
+        // Display results
+        Console.WriteLine($"{seconds} seconds is equal to {minutes} minutes.");
+        Console.WriteLine($"{seconds} seconds is equal to {hours} hours.");
+        Console.WriteLine($"{seconds} seconds is equal to {days} days.");
+        Console.WriteLine($"{seconds} seconds is equal to {months} months.");
+    }
+}
